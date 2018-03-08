@@ -4,6 +4,17 @@ const plural = require('plural')
 
 const awsHelper = require('./awsHelper')
 
+const webshot = require('webshot')
+const screenshot = (url, file) => new Promise((resolve, reject) => {
+  const screenSize = { width: 1920, height: 1080 }
+  webshot(url, file, { screenSize }, error => {
+    if (error) {
+      return reject(error)
+    }
+    resolve(file)
+  })
+})
+
 const comprehendEntitiesResponse = require('./samples/comprehendEntitiesResponse.json')
 
 const username = 'julsimon'
@@ -23,9 +34,9 @@ const postIds = [
 
 const asJson = url => `${url}?format=json`
 const userUrl = username => `https://medium.com/@${username}`
-const latestPostsUrl = username => asJson(`${userUrl(username)}/latest`)
-const userPostUrl = (username, postId) => asJson(`${userUrl(username)}/${postId}`)
-
+const latestPostsJsonUrl = username => asJson(`${userUrl(username)}/latest`)
+const userPostUrl = (username, postId) => `${userUrl(username)}/${postId}`
+const userPostJsonUrl = (username, postId) => asJson(userPostUrl(username, postId))
 
 const postsIdsFromResponse = response => {
   const items = _.get(response, 'payload.streamItems', [])
@@ -45,7 +56,7 @@ const getJsonData = async url => {
 }
 
 const latestPostsIds = async username => {
-  const url = latestPostsUrl(username)
+  const url = latestPostsJsonUrl(username)
   const data = await getJsonData(url)
   return postsIdsFromResponse(data)
 }
@@ -64,7 +75,7 @@ const textInPostFromResponse = (response, types = DEFAULT_TYPES) => {
 }
 
 const textInPostId = async (username, postId) => {
-  const url = userPostUrl(username, postId)
+  const url = userPostJsonUrl(username, postId)
   const data = await getJsonData(url)
   return textInPostFromResponse(data)
 }
@@ -129,10 +140,21 @@ const getUserPostAnalysis = async (username, postId) => {
   return analysis
 }
 
+const takeScreenshot = (username, postId) => {
+  const fileName = './images/' + new Date().getTime() + '.png'
+  const url = userPostUrl(username, postId)
+  return screenshot(url, fileName).then(() => fileName)
+}
+
 const run = async (username, postId) => {
-  const analysis = await getUserPostAnalysis(username, postId)
-  console.log('Saving speech ...');
-  return awsHelper.saveSpeechLocally(analysis)
+  // console.log('Getting user post analysis');
+  // const analysis = await getUserPostAnalysis(username, postId)
+  // console.log(analysis);
+  // console.log('Saving speech ...');
+  // const speechPath =  awsHelper.saveSpeechLocally(analysis)
+  console.log('Saving screenshot ...');
+  const screenshotPath = await takeScreenshot(username, postId)
+  console.log(screenshotPath);
 }
 
 run(username, postIds[4])

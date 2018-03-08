@@ -28,9 +28,7 @@ const getSpeech = text => {
   return polly.synthesizeSpeechAsync(params)
 }
 
-const saveSpeechLocally = text => {
-  return getSpeech(text).then(saveSpeech)
-}
+const saveSpeechLocally = text => getSpeech(text).then(saveSpeech)
 
 module.exports = {
   getEntities,
