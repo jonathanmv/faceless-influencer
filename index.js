@@ -88,7 +88,7 @@ const getStatsFromComprehendResponse = ({ Entities }) => {
 const describeEntityCounts = counts => {
   const top = counts[0]
   const intro = `We find a total of ${counts.length} entities mentioned. `
-  const topCount = `Mainly "${top.name}" which appears ${top.count} times, followed by`
+  const topCount = `Mainly "${top.name}" which appears ${top.count} times, followed by `
   const topCounts = counts.slice(1, 4).map(({name, count}) => `"${name}" mentioned ${count} times`).join(', ')
   const rest = counts.slice(4, 7).map(({name}) => name).join(', ')
   const others = `. Some other mentions include ${rest} plus many others`
@@ -112,9 +112,8 @@ const describePostTexts = texts => {
 }
 
 const log = console.log.bind(console)
-const run = async (username, postId) => {
-  // latestPostsIds(username)
-  // .then(log).catch(log)
+
+const getUserPostAnalysis = async (username, postId) => {
   const textsInPost = await textInPostId(username, postId)
   const entitiesResponse = await awsHelper.getEntities(textsInPost.join('.\n'))
   const postTextDescription = describePostTexts(textsInPost)
@@ -125,9 +124,17 @@ const run = async (username, postId) => {
     describeEntityCounts(stats.sortedEntityNamesCount),
     describeTypesCounts(stats.sortedTypesCount)
   ]
-  const toRead = descriptions.join('.\n')
-  console.log(toRead)
+  const analysis = descriptions.join('.\n')
+  console.log(analysis);
+  return analysis
+}
+
+const run = async (username, postId) => {
+  const analysis = await getUserPostAnalysis(username, postId)
+  console.log('Saving speech ...');
+  return awsHelper.saveSpeechLocally(analysis)
 }
 
 run(username, postIds[4])
+.then(log)
 .catch(log)
