@@ -4,6 +4,10 @@ const plural = require('plural')
 
 const awsHelper = require('./awsHelper')
 
+const util = require('util')
+const exec = util.promisify(require('child_process').exec)
+
+
 const webshot = require('webshot')
 const screenshot = (url, file) => new Promise((resolve, reject) => {
   const screenSize = { width: 1920, height: 1080 }
@@ -146,17 +150,31 @@ const takeScreenshot = (username, postId) => {
   return screenshot(url, fileName).then(() => fileName)
 }
 
-const run = async (username, postId) => {
-  // console.log('Getting user post analysis');
-  // const analysis = await getUserPostAnalysis(username, postId)
-  // console.log(analysis);
-  // console.log('Saving speech ...');
-  // const speechPath =  awsHelper.saveSpeechLocally(analysis)
-  console.log('Saving screenshot ...');
-  const screenshotPath = await takeScreenshot(username, postId)
-  console.log(screenshotPath);
+const createVideo = (image, audio) => {
+  const fileName = './videos/' + new Date().getTime() + '.mp4'
+  const command = [
+    'ffmpeg -loop 1 -i ',
+    image,
+    ' -i ',
+    audio,
+    ' -c:v libx264 -tune stillimage -c:a aac -b:a 192k -pix_fmt yuv420p -shortest ',
+    fileName
+  ].join('')
+  return exec(command).then(() => fileName)
 }
 
-run(username, postIds[4])
+const run = async (username, postId) => {
+  console.log('Getting user post analysis');
+  const analysis = await getUserPostAnalysis(username, postId)
+  console.log(analysis);
+  console.log('Saving speech ...');
+  const speechPath = await awsHelper.saveSpeechLocally(analysis)
+  console.log('Saving screenshot ...');
+  const screenshotPath = await takeScreenshot(username, postId)
+  console.log(`Creating video from ${screenshotPath} and ${speechPath}`);
+  return createVideo(screenshotPath, speechPath)
+}
+
+run(username, postIds[1])
 .then(log)
 .catch(log)
