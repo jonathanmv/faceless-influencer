@@ -1,0 +1,1403 @@
+{
+    "success": true,
+    "payload": {
+        "value": {
+            "id": "da09f30cca38",
+            "versionId": "5f126d37b825",
+            "creatorId": "4ffe14103b7a",
+            "homeCollectionId": "",
+            "title": "Yet another 10 Deep Learning projects based on Apache MXNet",
+            "detectedLanguage": "en",
+            "latestVersion": "5f126d37b825",
+            "latestPublishedVersion": "5f126d37b825",
+            "hasUnpublishedEdits": false,
+            "latestRev": 856,
+            "createdAt": 1519574873057,
+            "updatedAt": 1520284831788,
+            "acceptedAt": 0,
+            "firstPublishedAt": 1519582996353,
+            "latestPublishedAt": 1519582996353,
+            "vote": false,
+            "experimentalCss": "",
+            "displayAuthor": "",
+            "content": {
+                "subtitle": "In previous articles, I listed 10 Deep Learning projects based on Apache MXNet…. and then 10 more… and what do you know, here is another…",
+                "bodyModel": {
+                    "paragraphs": [
+                        {
+                            "name": "5d94",
+                            "type": 3,
+                            "text": "Yet another 10 Deep Learning projects based on Apache MXNet",
+                            "markups": []
+                        },
+                        {
+                            "name": "6afd",
+                            "type": 1,
+                            "text": "In previous articles, I listed 10 Deep Learning projects based on Apache MXNet…. and then 10 more… and what do you know, here is another batch!",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 31,
+                                    "end": 56,
+                                    "href": "https://medium.com/@julsimon/10-deep-learning-projects-based-on-apache-mxnet-8231109f3f64",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 3,
+                                    "start": 66,
+                                    "end": 78,
+                                    "href": "https://mxnet.incubator.apache.org",
+                                    "title": "",
+                                    "rel": "nofollow noopener",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 3,
+                                    "start": 90,
+                                    "end": 97,
+                                    "href": "https://medium.com/@julsimon/10-more-deep-learning-projects-based-on-apache-mxnet-a2dababe455f",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "bdd0",
+                            "type": 4,
+                            "text": "Oh, we’ll get there… eventually.",
+                            "markups": [],
+                            "layout": 1,
+                            "metadata": {
+                                "id": "1*h3bzFiFNKHqaxap574xtvg.png",
+                                "originalWidth": 710,
+                                "originalHeight": 473,
+                                "isFeatured": true
+                            }
+                        },
+                        {
+                            "name": "fa2b",
+                            "type": 3,
+                            "text": "Models",
+                            "markups": []
+                        },
+                        {
+                            "name": "f30b",
+                            "type": 13,
+                            "text": "#1 — Dual Path Networks",
+                            "markups": []
+                        },
+                        {
+                            "name": "2496",
+                            "type": 1,
+                            "text": "This is an implementation of the architecture described on the self-titled paper by Yunpeng Chen, Jianan Li, Huaxin Xiao, Xiaojie Jin, Shuicheng Yan and Jiashi Feng.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 59,
+                                    "end": 80,
+                                    "href": "https://arxiv.org/abs/1707.01629",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "bfb6",
+                            "type": 6,
+                            "text": "This architecture won the ImageNet 2017 object localization competition with a top-5 error of 6.22%.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 26,
+                                    "end": 71,
+                                    "href": "http://image-net.org/challenges/LSVRC/2017/results",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 94,
+                                    "end": 99
+                                }
+                            ],
+                            "hasDropCap": true
+                        },
+                        {
+                            "name": "03be",
+                            "type": 1,
+                            "text": "Quoting from the paper: “On the ImageNet-1k dataset, a shallow DPN surpasses the best ResNeXt-101(64x4d) with 26% smaller model size, 25% less computational cost and 8% lower memory consumption, and a deeper DPN (DPN-131) further pushes the state-of-the-art single model performance with about 2 times faster training speed”.",
+                            "markups": [
+                                {
+                                    "type": 2,
+                                    "start": 25,
+                                    "end": 323
+                                }
+                            ]
+                        },
+                        {
+                            "name": "4e16",
+                            "type": 14,
+                            "text": "cypw/DPNs\nDPNs - Dual Path Networksgithub.com",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 0,
+                                    "end": 45,
+                                    "href": "https://github.com/cypw/DPNs",
+                                    "title": "https://github.com/cypw/DPNs",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 0,
+                                    "end": 9
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 10,
+                                    "end": 35
+                                }
+                            ],
+                            "mixtapeMetadata": {
+                                "mediaResourceId": "8f572be880d03a39a381cd35497cd4a5",
+                                "thumbnailImageId": "0*hIBcjAuBeO34FE1u.",
+                                "href": "https://github.com/cypw/DPNs"
+                            }
+                        },
+                        {
+                            "name": "89d9",
+                            "type": 13,
+                            "text": "#2— Squeeze-and-Excitation Networks",
+                            "markups": []
+                        },
+                        {
+                            "name": "8470",
+                            "type": 1,
+                            "text": "This is an implementation of the architecture described on the self-titled paper by Jie Hu, Li Shen and Gang Sun.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 59,
+                                    "end": 80,
+                                    "href": "https://arxiv.org/abs/1709.01507",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "096d",
+                            "type": 6,
+                            "text": "This architecture won the ImageNet 2017 classification competition with a top-5 error of 2.251%.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 26,
+                                    "end": 66,
+                                    "href": "http://image-net.org/challenges/LSVRC/2017/results",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 89,
+                                    "end": 95
+                                }
+                            ],
+                            "hasDropCap": true
+                        },
+                        {
+                            "name": "1b98",
+                            "type": 14,
+                            "text": "bruinxiong/SENet.mxnet\nSENet.mxnet — :fire::fire: A MXNet implementation of Squeeze-and-Excitation Networks (SE-ResNext, SE-Resnet…github.com",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 0,
+                                    "end": 141,
+                                    "href": "https://github.com/bruinxiong/SENet.mxnet",
+                                    "title": "https://github.com/bruinxiong/SENet.mxnet",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 0,
+                                    "end": 22
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 23,
+                                    "end": 131
+                                }
+                            ],
+                            "mixtapeMetadata": {
+                                "mediaResourceId": "055b985f09e7a6c9aa6b6e85c7cddd43",
+                                "thumbnailImageId": "0*sA048PAKJ0aMiMLj.",
+                                "href": "https://github.com/bruinxiong/SENet.mxnet"
+                            }
+                        },
+                        {
+                            "name": "ff53",
+                            "type": 13,
+                            "text": "#3 — Capsule Networks (Symbolic API)",
+                            "markups": []
+                        },
+                        {
+                            "name": "369f",
+                            "type": 1,
+                            "text": "This project implements the CapsNet architecture presented in the “Dynamic Routing Between Capsules” paper by Sara Sabour, Nicholas Frosst, and Geoffrey E Hinton. In a nutshell, capsule networks are an exciting new development designed to overcome the limitations of convolutional neural networks.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 67,
+                                    "end": 99,
+                                    "href": "https://arxiv.org/abs/1710.09829",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 67,
+                                    "end": 99
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 239,
+                                    "end": 296
+                                }
+                            ]
+                        },
+                        {
+                            "name": "fc27",
+                            "type": 14,
+                            "text": "Soonhwan-Kwon/capsnet.mxnet\ncapsnet.mxnet - MXNet implementation of CapsNetgithub.com",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 0,
+                                    "end": 85,
+                                    "href": "https://github.com/Soonhwan-Kwon/capsnet.mxnet",
+                                    "title": "https://github.com/Soonhwan-Kwon/capsnet.mxnet",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 0,
+                                    "end": 27
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 28,
+                                    "end": 75
+                                }
+                            ],
+                            "mixtapeMetadata": {
+                                "mediaResourceId": "6c7bc2f35d611f4d471ac174385bf95e",
+                                "thumbnailImageId": "0*x5QAIfyzNC6bKo0u.",
+                                "href": "https://github.com/Soonhwan-Kwon/capsnet.mxnet"
+                            }
+                        },
+                        {
+                            "name": "432d",
+                            "type": 1,
+                            "text": "This code achieves 99.71% accuracy on the MNIST dataset, which is in line with the scores reported in the paper.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 42,
+                                    "end": 47,
+                                    "href": "http://yann.lecun.com/exdb/mnist/",
+                                    "title": "",
+                                    "rel": "noopener",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 19,
+                                    "end": 25
+                                }
+                            ]
+                        },
+                        {
+                            "name": "069d",
+                            "type": 4,
+                            "text": "",
+                            "markups": [],
+                            "layout": 1,
+                            "metadata": {
+                                "id": "1*eJ4u8aUib0ptWBp9aCPpfA.png",
+                                "originalWidth": 647,
+                                "originalHeight": 397
+                            }
+                        },
+                        {
+                            "name": "fdef",
+                            "type": 13,
+                            "text": "#4 — Capsule Networks (Gluon API)",
+                            "markups": []
+                        },
+                        {
+                            "name": "adf6",
+                            "type": 1,
+                            "text": "This project also implements the CapsNet architecture, but it does so using the imperative Gluon API (here’s an introduction to Gluon if you’re not familiar with it).",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 112,
+                                    "end": 124,
+                                    "href": "https://medium.com/@julsimon/gluon-building-blocks-for-your-deep-learning-universe-4bce4e56ef55",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "c145",
+                            "type": 14,
+                            "text": "GarrickLin/Capsnet.Gluon\nCapsnet.Gluon - Capsule Net implementation in Gluongithub.com",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 0,
+                                    "end": 86,
+                                    "href": "https://github.com/GarrickLin/Capsnet.Gluon",
+                                    "title": "https://github.com/GarrickLin/Capsnet.Gluon",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 0,
+                                    "end": 24
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 25,
+                                    "end": 76
+                                }
+                            ],
+                            "mixtapeMetadata": {
+                                "mediaResourceId": "10f76d1c47fcf6780fcde75061cf382f",
+                                "thumbnailImageId": "0*-gAuqMBIEs1HySHJ.",
+                                "href": "https://github.com/GarrickLin/Capsnet.Gluon"
+                            }
+                        },
+                        {
+                            "name": "a0e2",
+                            "type": 1,
+                            "text": "This implementation achieves 99.53% accuracy on MNIST, which the author suggests could be improved by adding more data augmentation.",
+                            "markups": [
+                                {
+                                    "type": 1,
+                                    "start": 29,
+                                    "end": 35
+                                }
+                            ]
+                        },
+                        {
+                            "name": "f029",
+                            "type": 4,
+                            "text": "",
+                            "markups": [],
+                            "layout": 1,
+                            "metadata": {
+                                "id": "1*CzWmdXt52h-z3xZx3WyOMQ.png",
+                                "originalWidth": 700,
+                                "originalHeight": 450
+                            }
+                        },
+                        {
+                            "name": "99ab",
+                            "type": 13,
+                            "text": "#5 — MobileNets",
+                            "markups": []
+                        },
+                        {
+                            "name": "3472",
+                            "type": 1,
+                            "text": "This is an implementation of the architecture described in “MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications” by Andrew G. Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco Andreetto and Hartwig Adam.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 60,
+                                    "end": 142,
+                                    "href": "https://arxiv.org/abs/1704.04861",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 60,
+                                    "end": 142
+                                }
+                            ]
+                        },
+                        {
+                            "name": "f08a",
+                            "type": 1,
+                            "text": "Quoting from the paper: MobileNets are “a class of efficient models (…) for mobile and embedded vision applications. MobileNets are based on a streamlined architecture that uses depth-wise separable convolutions to build light weight deep neural networks”.",
+                            "markups": [
+                                {
+                                    "type": 2,
+                                    "start": 40,
+                                    "end": 256
+                                }
+                            ]
+                        },
+                        {
+                            "name": "05f4",
+                            "type": 1,
+                            "text": "A model pre-trained on ImageNet is provided, with a top-5 accuracy of 90.15%.",
+                            "markups": [
+                                {
+                                    "type": 1,
+                                    "start": 70,
+                                    "end": 76
+                                }
+                            ]
+                        },
+                        {
+                            "name": "368a",
+                            "type": 14,
+                            "text": "KeyKy/mobilenet-mxnet\nmobilenet-mxnetgithub.com",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 0,
+                                    "end": 47,
+                                    "href": "https://github.com/KeyKy/mobilenet-mxnet",
+                                    "title": "https://github.com/KeyKy/mobilenet-mxnet",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 0,
+                                    "end": 21
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 6,
+                                    "end": 21
+                                }
+                            ],
+                            "mixtapeMetadata": {
+                                "mediaResourceId": "3771bcd89206fb5a4537d2c3cbcfe59e",
+                                "thumbnailImageId": "0*Ld142kgCPFl-Ui4A.",
+                                "href": "https://github.com/KeyKy/mobilenet-mxnet"
+                            }
+                        },
+                        {
+                            "name": "f225",
+                            "type": 3,
+                            "text": "Applications",
+                            "markups": []
+                        },
+                        {
+                            "name": "bece",
+                            "type": 13,
+                            "text": "#6— Face Recognition",
+                            "markups": []
+                        },
+                        {
+                            "name": "bd47",
+                            "type": 1,
+                            "text": "This is an implementation of the architecture described in “ArcFace: Additive Angular Margin Loss for Deep Face Recognition” by Jiankang Deng, Jia Guo, and Stefanos Zafeiriou.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 60,
+                                    "end": 123,
+                                    "href": "https://arxiv.org/abs/1801.07698",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 60,
+                                    "end": 123
+                                }
+                            ]
+                        },
+                        {
+                            "name": "5453",
+                            "type": 1,
+                            "text": "InsightFace is a new face recognition method, which achieves state-of-the art scores of 99.80%+ on LFW and 98%+ on Megaface.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 99,
+                                    "end": 102,
+                                    "href": "http://vis-www.cs.umass.edu/lfw/",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 3,
+                                    "start": 115,
+                                    "end": 123,
+                                    "href": "http://megaface.cs.washington.edu/",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 88,
+                                    "end": 94
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 107,
+                                    "end": 110
+                                }
+                            ]
+                        },
+                        {
+                            "name": "cd9e",
+                            "type": 14,
+                            "text": "deepinsight/insightface\ninsightface - Face Recognition Project on MXNetgithub.com",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 0,
+                                    "end": 81,
+                                    "href": "https://github.com/deepinsight/insightface",
+                                    "title": "https://github.com/deepinsight/insightface",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 0,
+                                    "end": 23
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 24,
+                                    "end": 71
+                                }
+                            ],
+                            "mixtapeMetadata": {
+                                "mediaResourceId": "76b0674adaee07e3e24509753b4e5c1c",
+                                "thumbnailImageId": "0*3uOAKjCdBCM3Z1qf.",
+                                "href": "https://github.com/deepinsight/insightface"
+                            }
+                        },
+                        {
+                            "name": "6491",
+                            "type": 13,
+                            "text": "#7 — Speech to Text",
+                            "markups": []
+                        },
+                        {
+                            "name": "35db",
+                            "type": 1,
+                            "text": "This is an implementation of the architecture described in “Deep Speech 2: End-to-End Speech Recognition in English and Mandarin” by Dario Amodei, Rishita Anubhai, Eric Battenberg, Carl Case, Jared Casper, Bryan Catanzaro, Jingdong Chen, Mike Chrzanowski, Adam Coates, Greg Diamos, Erich Elsen, Jesse Engel, Linxi Fan, Christopher Fougner, Tony Han, Awni Hannun, Billy Jun, Patrick LeGresley, Libby Lin, Sharan Narang, Andrew Ng, Sherjil Ozair, Ryan Prenger, Jonathan Raiman, Sanjeev Satheesh, David Seetapun, Shubho Sengupta, Yi Wang, Zhiqian Wang, Chong Wang, Bo Xiao, Dani Yogatama, Jun Zhan and Zhenyao Zhu (pfew!).",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 60,
+                                    "end": 128,
+                                    "href": "https://arxiv.org/abs/1512.02595",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 60,
+                                    "end": 128
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ac10",
+                            "type": 1,
+                            "text": "This is a great project if you want to build a speech-to-text model. Please bear in mind that you will need a very large dataset. Quoting from the original paper: “our English speech system is trained on 11,940 hours of speech, while the Mandarin system is trained on 9,400 hours. We use data synthesis to further augment the data during training”.",
+                            "markups": [
+                                {
+                                    "type": 1,
+                                    "start": 110,
+                                    "end": 128
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 164,
+                                    "end": 346
+                                }
+                            ]
+                        },
+                        {
+                            "name": "a6da",
+                            "type": 14,
+                            "text": "samsungsds-rnd/deepspeech.mxnet\ndeepspeech.mxnet - A MXNet implementation of Baidu's DeepSpeech architecturegithub.com",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 0,
+                                    "end": 118,
+                                    "href": "https://github.com/samsungsds-rnd/deepspeech.mxnet",
+                                    "title": "https://github.com/samsungsds-rnd/deepspeech.mxnet",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 0,
+                                    "end": 31
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 32,
+                                    "end": 108
+                                }
+                            ],
+                            "mixtapeMetadata": {
+                                "mediaResourceId": "c5073d0e712a982054b72397063f4643",
+                                "thumbnailImageId": "0*N-HrDEp_Nig8Whmh.",
+                                "href": "https://github.com/samsungsds-rnd/deepspeech.mxnet"
+                            }
+                        },
+                        {
+                            "name": "6985",
+                            "type": 13,
+                            "text": "#8— 3D face reconstruction",
+                            "markups": []
+                        },
+                        {
+                            "name": "b312",
+                            "type": 1,
+                            "text": "This is an implementation of the architecture described in “End-to-end 3D face reconstruction with deep neural networks” by Pengfei Dou, Shishir K. Shah and Ioannis A. Kakadiaris.",
+                            "markups": [
+                                {
+                                    "type": 1,
+                                    "start": 60,
+                                    "end": 119
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1644",
+                            "type": 1,
+                            "text": "Thanks to this project, you can build a 3D model of a a face using only a single 2D image. Quite impressive!",
+                            "markups": []
+                        },
+                        {
+                            "name": "f6c2",
+                            "type": 14,
+                            "text": "ShownX/mxnet-E2FAR\nmxnet-E2FAR - MXNET/Gluon Implementation of End-to-end 3D Face Reconstruction with Deep Neural Networksgithub.com",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 0,
+                                    "end": 132,
+                                    "href": "https://github.com/ShownX/mxnet-E2FAR",
+                                    "title": "https://github.com/ShownX/mxnet-E2FAR",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 0,
+                                    "end": 18
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 19,
+                                    "end": 122
+                                }
+                            ],
+                            "mixtapeMetadata": {
+                                "mediaResourceId": "1a63d0926f01666c287e723412d0266c",
+                                "thumbnailImageId": "0*_EgYe6FUVrTm-7VN.",
+                                "href": "https://github.com/ShownX/mxnet-E2FAR"
+                            }
+                        },
+                        {
+                            "name": "aabc",
+                            "type": 4,
+                            "text": "Examples taken from the original paper",
+                            "markups": [],
+                            "layout": 1,
+                            "metadata": {
+                                "id": "1*eA1G_YupnjaCdxaAjVrvLA.png",
+                                "originalWidth": 374,
+                                "originalHeight": 165
+                            }
+                        },
+                        {
+                            "name": "1213",
+                            "type": 3,
+                            "text": "Tools",
+                            "markups": []
+                        },
+                        {
+                            "name": "a453",
+                            "type": 13,
+                            "text": "#9 — Deepo",
+                            "markups": []
+                        },
+                        {
+                            "name": "6e4b",
+                            "type": 1,
+                            "text": "Deepo is a set of pre-built containers for Deep Learning. It supports MXNet as well as other frameworks. Containers will run on Linux (CPU/GPU), Windows (CPU) and MacOS (CPU) with either Python 2.7 or Python 3.6.",
+                            "markups": []
+                        },
+                        {
+                            "name": "9a86",
+                            "type": 14,
+                            "text": "ufoym/deepo\ndeepo - A series of Docker images (and their generator) that allows you to quickly set up your deep learning research…github.com",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 0,
+                                    "end": 140,
+                                    "href": "https://github.com/ufoym/deepo",
+                                    "title": "https://github.com/ufoym/deepo",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 0,
+                                    "end": 11
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 12,
+                                    "end": 130
+                                }
+                            ],
+                            "mixtapeMetadata": {
+                                "mediaResourceId": "8c90ade65399c50c200e12b7a79bb0f3",
+                                "thumbnailImageId": "0*oYFsnsjVoVZl0tYO.",
+                                "href": "https://github.com/ufoym/deepo"
+                            }
+                        },
+                        {
+                            "name": "01df",
+                            "type": 1,
+                            "text": "This is pretty handy if you want to work locally, and of course on AWS with one of our Docker services: ECS, EKS or Fargate.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 104,
+                                    "end": 107,
+                                    "href": "http://aws.amazon.com/ecs",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 3,
+                                    "start": 109,
+                                    "end": 112,
+                                    "href": "http://aws.amazon.com/eks",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 3,
+                                    "start": 116,
+                                    "end": 123,
+                                    "href": "http://aws.amazon.com/fargate",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "166e",
+                            "type": 13,
+                            "text": "#10 — MXNet finetuner",
+                            "markups": []
+                        },
+                        {
+                            "name": "d5e9",
+                            "type": 1,
+                            "text": "This tool simplifies the process of fine-tuning an image classification dataset on your own dataset (here’s an introduction to fine-tuning if you’re unfamiliar with this technique).",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 111,
+                                    "end": 138,
+                                    "href": "https://medium.com/@julsimon/training-mxnet-part-2-cifar-10-c7b0b729c33c",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "3526",
+                            "type": 1,
+                            "text": "It wil automatically build RecordIO files from a tree of images, download pre-trained models, replace the last layer according to the number of classes in your dataset, add data augmentation, run fine-tuning, visualize results, etc.",
+                            "markups": []
+                        },
+                        {
+                            "name": "2484",
+                            "type": 1,
+                            "text": "Good stuff!",
+                            "markups": []
+                        },
+                        {
+                            "name": "c454",
+                            "type": 14,
+                            "text": "knjcode/mxnet-finetuner\nmxnet-finetuner - An all-in-one Deep Learning toolkit for image classification to fine-tuning pretrained models using…github.com",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 0,
+                                    "end": 152,
+                                    "href": "https://github.com/knjcode/mxnet-finetuner",
+                                    "title": "https://github.com/knjcode/mxnet-finetuner",
+                                    "rel": "",
+                                    "anchorType": 0
+                                },
+                                {
+                                    "type": 1,
+                                    "start": 0,
+                                    "end": 23
+                                },
+                                {
+                                    "type": 2,
+                                    "start": 24,
+                                    "end": 142
+                                }
+                            ],
+                            "mixtapeMetadata": {
+                                "mediaResourceId": "83d94166eb7bd151ff7e6fb5e1cd27b0",
+                                "thumbnailImageId": "0*otZg4sS6BoMonC31.",
+                                "href": "https://github.com/knjcode/mxnet-finetuner"
+                            }
+                        },
+                        {
+                            "name": "9e9d",
+                            "type": 1,
+                            "text": "That’s it for today. Kudos to all project authors for their fascinating work. I hope they will inspire you to get started with Deep Learning.",
+                            "markups": [
+                                {
+                                    "type": 3,
+                                    "start": 110,
+                                    "end": 140,
+                                    "href": "https://medium.com/@julsimon/10-steps-on-the-road-to-deep-learning-part-1-f9e4b5c0a459",
+                                    "title": "",
+                                    "rel": "",
+                                    "anchorType": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "f0dc",
+                            "type": 1,
+                            "text": "As always, thanks a lot for reading!",
+                            "markups": []
+                        },
+                        {
+                            "name": "c47c",
+                            "type": 1,
+                            "text": "One of the most addictive albums I’ve heard in years. Listen once, sing it forever \\m/",
+                            "markups": [
+                                {
+                                    "type": 2,
+                                    "start": 0,
+                                    "end": 86
+                                }
+                            ]
+                        },
+                        {
+                            "name": "786d",
+                            "type": 11,
+                            "text": "",
+                            "markups": [],
+                            "layout": 1,
+                            "iframe": {
+                                "mediaResourceId": "e65e45a18c6ac5b299efd224d6661a2c",
+                                "iframeWidth": 300,
+                                "iframeHeight": 380,
+                                "thumbnailUrl": "https://i.embed.ly/1/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2F1d269a1b1db2307f56682a506c70f25a911c94b7&key=a19fcc184b9711e1b4764040d3dc5c07"
+                            }
+                        }
+                    ],
+                    "sections": [
+                        {
+                            "name": "51c1",
+                            "startIndex": 0
+                        },
+                        {
+                            "name": "8928",
+                            "startIndex": 52
+                        },
+                        {
+                            "name": "36f6",
+                            "startIndex": 54
+                        }
+                    ]
+                },
+                "postDisplay": {
+                    "coverless": true
+                }
+            },
+            "virtuals": {
+                "allowNotes": true,
+                "previewImage": {
+                    "imageId": "1*h3bzFiFNKHqaxap574xtvg.png",
+                    "filter": "",
+                    "backgroundSize": "",
+                    "originalWidth": 710,
+                    "originalHeight": 473,
+                    "strategy": "resample",
+                    "height": 0,
+                    "width": 0
+                },
+                "wordCount": 959,
+                "imageCount": 4,
+                "readingTime": 4.318867924528302,
+                "subtitle": "In previous articles, I listed 10 Deep Learning projects based on Apache MXNet…. and then 10 more… and what do you know, here is another…",
+                "usersBySocialRecommends": [],
+                "recommends": 24,
+                "isBookmarked": false,
+                "tags": [
+                    {
+                        "slug": "machine-learning",
+                        "name": "Machine Learning",
+                        "postCount": 29812,
+                        "virtuals": {
+                            "isFollowing": false
+                        },
+                        "metadata": {
+                            "followerCount": 23773,
+                            "postCount": 29812,
+                            "coverImage": {
+                                "id": "1*TPbqOiq2kgue8tw6aDfbyg.png",
+                                "originalWidth": 1609,
+                                "originalHeight": 604
+                            }
+                        },
+                        "type": "Tag"
+                    },
+                    {
+                        "slug": "deep-learning",
+                        "name": "Deep Learning",
+                        "postCount": 6893,
+                        "virtuals": {
+                            "isFollowing": false
+                        },
+                        "metadata": {
+                            "followerCount": 10010,
+                            "postCount": 6893,
+                            "coverImage": {
+                                "id": "1*-hVhCFnPP5Kuac76XREWtA.jpeg",
+                                "originalWidth": 2478,
+                                "originalHeight": 3074,
+                                "isFeatured": true
+                            }
+                        },
+                        "type": "Tag"
+                    },
+                    {
+                        "slug": "artificial-intelligence",
+                        "name": "Artificial Intelligence",
+                        "postCount": 42772,
+                        "virtuals": {
+                            "isFollowing": false
+                        },
+                        "metadata": {
+                            "followerCount": 674370,
+                            "postCount": 42772,
+                            "coverImage": {
+                                "id": "1*gAn_BSffVBcwCIR6bDgK1g.jpeg"
+                            }
+                        },
+                        "type": "Tag"
+                    },
+                    {
+                        "slug": "open-source",
+                        "name": "Open Source",
+                        "postCount": 11358,
+                        "virtuals": {
+                            "isFollowing": false
+                        },
+                        "metadata": {
+                            "followerCount": 6201,
+                            "postCount": 11358,
+                            "coverImage": {
+                                "id": "1*Scn1Nm33oukOJpUd4Ukszw.png",
+                                "originalWidth": 1052,
+                                "originalHeight": 668
+                            }
+                        },
+                        "type": "Tag"
+                    },
+                    {
+                        "slug": "data-science",
+                        "name": "Data Science",
+                        "postCount": 19776,
+                        "virtuals": {
+                            "isFollowing": false
+                        },
+                        "metadata": {
+                            "followerCount": 14315,
+                            "postCount": 19776,
+                            "coverImage": {
+                                "id": "1*jcbUF7dAhAIRS8nfUlNtow.gif",
+                                "originalWidth": 516,
+                                "originalHeight": 254
+                            }
+                        },
+                        "type": "Tag"
+                    }
+                ],
+                "socialRecommendsCount": 0,
+                "responsesCreatedCount": 0,
+                "links": {
+                    "entries": [
+                        {
+                            "url": "http://yann.lecun.com/exdb/mnist/",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://medium.com/@julsimon/10-steps-on-the-road-to-deep-learning-part-1-f9e4b5c0a459",
+                            "alts": [
+                                {
+                                    "type": 2,
+                                    "url": "medium://p/f9e4b5c0a459"
+                                },
+                                {
+                                    "type": 3,
+                                    "url": "medium://p/f9e4b5c0a459"
+                                }
+                            ],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "http://vis-www.cs.umass.edu/lfw/",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://medium.com/@julsimon/gluon-building-blocks-for-your-deep-learning-universe-4bce4e56ef55",
+                            "alts": [
+                                {
+                                    "type": 3,
+                                    "url": "medium://p/4bce4e56ef55"
+                                },
+                                {
+                                    "type": 2,
+                                    "url": "medium://p/4bce4e56ef55"
+                                }
+                            ],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://medium.com/@julsimon/10-more-deep-learning-projects-based-on-apache-mxnet-a2dababe455f",
+                            "alts": [
+                                {
+                                    "type": 2,
+                                    "url": "medium://p/a2dababe455f"
+                                },
+                                {
+                                    "type": 3,
+                                    "url": "medium://p/a2dababe455f"
+                                }
+                            ],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://github.com/KeyKy/mobilenet-mxnet",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://github.com/GarrickLin/Capsnet.Gluon",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://github.com/cypw/DPNs",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://github.com/bruinxiong/SENet.mxnet",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://github.com/Soonhwan-Kwon/capsnet.mxnet",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://github.com/knjcode/mxnet-finetuner",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://github.com/ufoym/deepo",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://github.com/ShownX/mxnet-E2FAR",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://github.com/samsungsds-rnd/deepspeech.mxnet",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://github.com/deepinsight/insightface",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://mxnet.incubator.apache.org",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "http://megaface.cs.washington.edu/",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://medium.com/@julsimon/10-deep-learning-projects-based-on-apache-mxnet-8231109f3f64",
+                            "alts": [
+                                {
+                                    "type": 2,
+                                    "url": "medium://p/8231109f3f64"
+                                },
+                                {
+                                    "type": 3,
+                                    "url": "medium://p/8231109f3f64"
+                                }
+                            ],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://arxiv.org/abs/1801.07698",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://arxiv.org/abs/1710.09829",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://arxiv.org/abs/1707.01629",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://arxiv.org/abs/1512.02595",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://arxiv.org/abs/1709.01507",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://arxiv.org/abs/1704.04861",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "http://image-net.org/challenges/LSVRC/2017/results",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "http://aws.amazon.com/fargate",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "http://aws.amazon.com/ecs",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "http://aws.amazon.com/eks",
+                            "alts": [],
+                            "httpStatus": 200
+                        },
+                        {
+                            "url": "https://medium.com/@julsimon/training-mxnet-part-2-cifar-10-c7b0b729c33c",
+                            "alts": [
+                                {
+                                    "type": 2,
+                                    "url": "medium://p/c7b0b729c33c"
+                                },
+                                {
+                                    "type": 3,
+                                    "url": "medium://p/c7b0b729c33c"
+                                }
+                            ],
+                            "httpStatus": 200
+                        }
+                    ],
+                    "version": "0.3",
+                    "generatedAt": 1519582998559
+                },
+                "isLockedPreviewOnly": false,
+                "takeoverId": "",
+                "metaDescription": "",
+                "totalClapCount": 51,
+                "sectionCount": 3,
+                "readingList": 0
+            },
+            "coverless": true,
+            "slug": "yet-another-10-deep-learning-projects-based-on-apache-mxnet",
+            "translationSourcePostId": "",
+            "translationSourceCreatorId": "",
+            "isApprovedTranslation": false,
+            "inResponseToPostId": "",
+            "inResponseToRemovedAt": 0,
+            "isTitleSynthesized": true,
+            "allowResponses": true,
+            "importedUrl": "",
+            "importedPublishedAt": 0,
+            "visibility": 0,
+            "uniqueSlug": "yet-another-10-deep-learning-projects-based-on-apache-mxnet-da09f30cca38",
+            "previewContent": {
+                "bodyModel": {
+                    "paragraphs": [
+                        {
+                            "name": "previewImage",
+                            "type": 4,
+                            "text": "",
+                            "layout": 10,
+                            "metadata": {
+                                "id": "1*h3bzFiFNKHqaxap574xtvg.png",
+                                "originalWidth": 710,
+                                "originalHeight": 473,
+                                "isFeatured": true
+                            }
+                        },
+                        {
+                            "name": "5d94",
+                            "type": 3,
+                            "text": "Yet another 10 Deep Learning projects based on Apache MXNet",
+                            "markups": [],
+                            "alignment": 1
+                        }
+                    ],
+                    "sections": [
+                        {
+                            "startIndex": 0
+                        }
+                    ]
+                },
+                "isFullContent": false
+            },
+            "license": 0,
+            "inResponseToMediaResourceId": "",
+            "canonicalUrl": "https://medium.com/@julsimon/yet-another-10-deep-learning-projects-based-on-apache-mxnet-da09f30cca38",
+            "approvedHomeCollectionId": "",
+            "newsletterId": "",
+            "webCanonicalUrl": "https://medium.com/@julsimon/yet-another-10-deep-learning-projects-based-on-apache-mxnet-da09f30cca38",
+            "mediumUrl": "https://medium.com/@julsimon/yet-another-10-deep-learning-projects-based-on-apache-mxnet-da09f30cca38",
+            "migrationId": "",
+            "notifyFollowers": true,
+            "notifyTwitter": false,
+            "isSponsored": false,
+            "isRequestToPubDisabled": false,
+            "notifyFacebook": false,
+            "responseHiddenOnParentPostAt": 0,
+            "isSeries": false,
+            "isSubscriptionLocked": false,
+            "seriesLastAppendedAt": 0,
+            "audioVersionDurationSec": 0,
+            "sequenceId": "",
+            "isNsfw": false,
+            "isEligibleForRevenue": false,
+            "isBlockedFromHightower": false,
+            "deletedAt": 0,
+            "lockedPostSource": 0,
+            "hightowerMinimumGuaranteeStartsAt": 0,
+            "hightowerMinimumGuaranteeEndsAt": 0,
+            "featureLockRequestAcceptedAt": 0,
+            "featureLockRequestMinimumGuaranteeAmount": 0,
+            "isElevate": false,
+            "mongerRequestType": 1,
+            "type": "Post"
+        },
+        "mentionedUsers": [],
+        "collaborators": [],
+        "membershipPlans": [],
+        "collectionUserRelations": [],
+        "mode": null,
+        "references": {
+            "User": {
+                "4ffe14103b7a": {
+                    "userId": "4ffe14103b7a",
+                    "name": "Julien Simon",
+                    "username": "julsimon",
+                    "createdAt": 1480235528344,
+                    "lastPostCreatedAt": 1520099705641,
+                    "imageId": "1*YL5pNWXV7h6bs2gMibOj4g.jpeg",
+                    "backgroundImageId": "",
+                    "bio": "Hacker. Headbanger. Harley rider. Hunter. https://aws.amazon.com/evangelists/julien-simon/",
+                    "twitterScreenName": "julsimon",
+                    "socialStats": {
+                        "userId": "4ffe14103b7a",
+                        "usersFollowedCount": 32,
+                        "usersFollowedByCount": 2389,
+                        "type": "SocialStats"
+                    },
+                    "social": {
+                        "userId": "lo_e52a181b4f52",
+                        "targetUserId": "4ffe14103b7a",
+                        "type": "Social"
+                    },
+                    "facebookAccountId": "462007434169693",
+                    "allowNotes": 1,
+                    "isNsfw": false,
+                    "type": "User"
+                }
+            },
+            "Social": {
+                "4ffe14103b7a": {
+                    "userId": "lo_e52a181b4f52",
+                    "targetUserId": "4ffe14103b7a",
+                    "type": "Social"
+                }
+            },
+            "SocialStats": {
+                "4ffe14103b7a": {
+                    "userId": "4ffe14103b7a",
+                    "usersFollowedCount": 32,
+                    "usersFollowedByCount": 2389,
+                    "type": "SocialStats"
+                }
+            }
+        }
+    },
+    "v": 3,
+    "b": "32906-9fb2b17"
+}

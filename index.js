@@ -2,6 +2,8 @@ const axios = require('axios')
 const _ = require('lodash')
 const plural = require('plural')
 
+const awsHelper = require('./awsHelper')
+
 const comprehendEntitiesResponse = require('./samples/comprehendEntitiesResponse.json')
 
 const username = 'julsimon'
@@ -114,8 +116,9 @@ const run = async (username, postId) => {
   // latestPostsIds(username)
   // .then(log).catch(log)
   const textsInPost = await textInPostId(username, postId)
+  const entitiesResponse = await awsHelper.getEntities(textsInPost.join('.\n'))
   const postTextDescription = describePostTexts(textsInPost)
-  const stats = getStatsFromComprehendResponse(comprehendEntitiesResponse)
+  const stats = getStatsFromComprehendResponse(entitiesResponse)
   const descriptions = [
     describePostTexts(textsInPost),
     `Ok, now let's analyze it`,

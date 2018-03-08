@@ -1,0 +1,347 @@
+{
+  "Entities": [
+    {
+      "BeginOffset": 31,
+      "EndOffset": 36,
+      "Score": 1,
+      "Text": "Gluon",
+      "Type": "COMMERCIAL_ITEM"
+    },
+    {
+      "BeginOffset": 68,
+      "EndOffset": 78,
+      "Score": 0.7594050168991089,
+      "Text": "first look",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 86,
+      "EndOffset": 91,
+      "Score": 1,
+      "Text": "Gluon",
+      "Type": "COMMERCIAL_ITEM"
+    },
+    {
+      "BeginOffset": 141,
+      "EndOffset": 146,
+      "Score": 1,
+      "Text": "MXNet",
+      "Type": "COMMERCIAL_ITEM"
+    },
+    {
+      "BeginOffset": 184,
+      "EndOffset": 189,
+      "Score": 1,
+      "Text": "Gluon",
+      "Type": "COMMERCIAL_ITEM"
+    },
+    {
+      "BeginOffset": 194,
+      "EndOffset": 199,
+      "Score": 0.7480824589729309,
+      "Text": "first",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 802,
+      "EndOffset": 807,
+      "Score": 1,
+      "Text": "Gluon",
+      "Type": "COMMERCIAL_ITEM"
+    },
+    {
+      "BeginOffset": 892,
+      "EndOffset": 903,
+      "Score": 0.9998754262924194,
+      "Text": "Each sample",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 909,
+      "EndOffset": 911,
+      "Score": 0.9999591112136841,
+      "Text": "28",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 912,
+      "EndOffset": 914,
+      "Score": 0.9515868425369263,
+      "Text": "28",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 939,
+      "EndOffset": 941,
+      "Score": 0.9991992115974426,
+      "Text": "28",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 943,
+      "EndOffset": 945,
+      "Score": 0.9357944130897522,
+      "Text": "28",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 947,
+      "EndOffset": 948,
+      "Score": 0.9959636926651001,
+      "Text": "1",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 1007,
+      "EndOffset": 1014,
+      "Score": 0.9480164051055908,
+      "Text": "1,28,28",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 1212,
+      "EndOffset": 1217,
+      "Score": 0.9999829530715942,
+      "Text": "Gluon",
+      "Type": "OTHER"
+    },
+    {
+      "BeginOffset": 1253,
+      "EndOffset": 1257,
+      "Score": 0.9999983310699463,
+      "Text": "ReLU",
+      "Type": "OTHER"
+    },
+    {
+      "BeginOffset": 1343,
+      "EndOffset": 1348,
+      "Score": 0.9990278482437134,
+      "Text": "Gluon",
+      "Type": "OTHER"
+    },
+    {
+      "BeginOffset": 1406,
+      "EndOffset": 1410,
+      "Score": 0.9986217021942139,
+      "Text": "CNNs",
+      "Type": "OTHER"
+    },
+    {
+      "BeginOffset": 1416,
+      "EndOffset": 1431,
+      "Score": 0.6760698556900024,
+      "Text": "one single line",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 1490,
+      "EndOffset": 1495,
+      "Score": 0.9998767375946045,
+      "Text": "Gluon",
+      "Type": "OTHER"
+    },
+    {
+      "BeginOffset": 1496,
+      "EndOffset": 1499,
+      "Score": 0.9985892176628113,
+      "Text": "API",
+      "Type": "OTHER"
+    },
+    {
+      "BeginOffset": 1589,
+      "EndOffset": 1592,
+      "Score": 0.9998031258583069,
+      "Text": "API",
+      "Type": "OTHER"
+    },
+    {
+      "BeginOffset": 1596,
+      "EndOffset": 1601,
+      "Score": 0.7357946634292603,
+      "Text": "MXNet",
+      "Type": "OTHER"
+    },
+    {
+      "BeginOffset": 1903,
+      "EndOffset": 1908,
+      "Score": 1,
+      "Text": "MXNet",
+      "Type": "COMMERCIAL_ITEM"
+    },
+    {
+      "BeginOffset": 1988,
+      "EndOffset": 1993,
+      "Score": 1,
+      "Text": "Gluon",
+      "Type": "COMMERCIAL_ITEM"
+    },
+    {
+      "BeginOffset": 2455,
+      "EndOffset": 2458,
+      "Score": 1,
+      "Text": "CNN",
+      "Type": "ORGANIZATION"
+    },
+    {
+      "BeginOffset": 2486,
+      "EndOffset": 2491,
+      "Score": 0.9999904632568359,
+      "Text": "MNIST",
+      "Type": "ORGANIZATION"
+    },
+    {
+      "BeginOffset": 2559,
+      "EndOffset": 2564,
+      "Score": 0.9999990463256836,
+      "Text": "First",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 2858,
+      "EndOffset": 2863,
+      "Score": 0.9999973773956299,
+      "Text": "First",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 2875,
+      "EndOffset": 2878,
+      "Score": 0.9999964237213135,
+      "Text": "CNN",
+      "Type": "ORGANIZATION"
+    },
+    {
+      "BeginOffset": 2909,
+      "EndOffset": 2914,
+      "Score": 0.9953578114509583,
+      "Text": "99.2%",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 2938,
+      "EndOffset": 2943,
+      "Score": 0.9999960660934448,
+      "Text": "MNIST",
+      "Type": "ORGANIZATION"
+    },
+    {
+      "BeginOffset": 2956,
+      "EndOffset": 2960,
+      "Score": 0.9999332427978516,
+      "Text": "ReLU",
+      "Type": "ORGANIZATION"
+    },
+    {
+      "BeginOffset": 3013,
+      "EndOffset": 3022,
+      "Score": 0.9999446272850037,
+      "Text": "50 epochs",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 3067,
+      "EndOffset": 3073,
+      "Score": 0.99977046251297,
+      "Text": "92.42%",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 3112,
+      "EndOffset": 3117,
+      "Score": 0.9999475479125977,
+      "Text": "MNIST",
+      "Type": "ORGANIZATION"
+    },
+    {
+      "BeginOffset": 3125,
+      "EndOffset": 3130,
+      "Score": 0.9243049025535583,
+      "Text": "99.2%",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 3157,
+      "EndOffset": 3170,
+      "Score": 0.9999918937683105,
+      "Text": "Fashion MNIST",
+      "Type": "ORGANIZATION"
+    },
+    {
+      "BeginOffset": 3461,
+      "EndOffset": 3466,
+      "Score": 0.9999016523361206,
+      "Text": "89.7%",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 3541,
+      "EndOffset": 3551,
+      "Score": 0.9999750852584839,
+      "Text": "Second try",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 3892,
+      "EndOffset": 3896,
+      "Score": 0.9999927282333374,
+      "Text": "Adam",
+      "Type": "PERSON"
+    },
+    {
+      "BeginOffset": 3918,
+      "EndOffset": 3927,
+      "Score": 0.9999870657920837,
+      "Text": "50 epochs",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 3972,
+      "EndOffset": 3978,
+      "Score": 0.9999492764472961,
+      "Text": "93.05%",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 3988,
+      "EndOffset": 3991,
+      "Score": 0.9998190402984619,
+      "Text": "#10",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 3997,
+      "EndOffset": 4001,
+      "Score": 0.9962092638015747,
+      "Text": "Adam",
+      "Type": "PERSON"
+    },
+    {
+      "BeginOffset": 4032,
+      "EndOffset": 4037,
+      "Score": 0.9720510244369507,
+      "Text": "Third",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 4339,
+      "EndOffset": 4343,
+      "Score": 0.9999638795852661,
+      "Text": "both",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 4557,
+      "EndOffset": 4563,
+      "Score": 0.9999815821647644,
+      "Text": "93.31%",
+      "Type": "QUANTITY"
+    },
+    {
+      "BeginOffset": 4566,
+      "EndOffset": 4576,
+      "Score": 0.9984095096588135,
+      "Text": "Fourth try",
+      "Type": "QUANTITY"
+    }
+  ]
+}
