@@ -1,8 +1,9 @@
 const axios = require('axios')
 const _ = require('lodash')
 const plural = require('plural')
-const awsHelper = require('./awsHelper')
 
+const awsHelper = require('./awsHelper')
+const mediaHelper = require('./mediaHelper')
 
 const asJson = url => `${url}?format=json`
 const userUrl = username => `https://medium.com/@${username}`
@@ -111,7 +112,13 @@ const getUserPostAnalysis = async (username, postId) => {
   return analysis
 }
 
+const saveUserPostScreenshotLocally = (username, postId) => {
+  const url = userPostUrl(username, postId)
+  return mediaHelper.takeScreenshot(url)
+}
+
 module.exports = {
   latestPostsIds,
-  getUserPostAnalysis
+  getUserPostAnalysis,
+  saveUserPostScreenshotLocally
 }
