@@ -129,5 +129,5 @@ const run = async (username, postId) => {
   console.log(toRead)
 }
 
-run(username, postIds[3])
+run(username, postIds[4])
 .catch(log)
