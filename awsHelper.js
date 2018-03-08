@@ -1,8 +1,8 @@
 const bluebird = require('bluebird')
 const aws = require('aws-sdk')
+// plus the confiuration in the ~/.aws/credentials file
 const config = { region: 'us-east-1' }
 const comprehend = bluebird.promisifyAll(new aws.Comprehend(config))
-// to avoid
 const polly = bluebird.promisifyAll(new aws.Polly(config))
 const fs = bluebird.promisifyAll(require('fs'))
 
@@ -35,27 +35,3 @@ module.exports = {
   getEntities,
   saveSpeechLocally
 }
-
-
-/*
-create from single image and audio
-https://superuser.com/questions/1041816/combine-one-image-one-audio-file-to-make-one-video-using-ffmpeg
-rm -rf out.mp4
-ffmpeg -loop 1 -i shot.png -i speech.mp3 -c:v libx264 -tune stillimage -c:a aac -b:a 192k -pix_fmt yuv420p -shortest out.mp4
-open out.mp4
-
-
-Create video from single image
-https://stackoverflow.com/questions/25891342/creating-a-video-from-a-single-image-for-a-specific-duration-in-ffmpeg
-
-ffmpeg -loop 1 -i image.png -c:v libx264 -t 15 -pix_fmt yuv420p -vf scale=320:240 out.mp4
-
-from several images
-
-ffmpeg -f concat -safe 0 -i v.txt -vsync vfr -pix_fmt yuv420p o.mp4
-
-
-rm -rf out.mp4; ffmpeg -loop 1 -i shot.png -c:v libx264 -t 15 -pix_fmt yuv420p out.mp4
-
-
-*/
