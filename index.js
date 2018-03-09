@@ -24,6 +24,7 @@ const makeVideo = async (username, postNumber) => {
 
 const run = ({ username = 'jonathanmv', post = 1 }) => {
   return makeVideo(username, post)
+    .then(log)
     .catch(log)
 }
 

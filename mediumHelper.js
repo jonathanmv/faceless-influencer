@@ -108,7 +108,6 @@ const getUserPostAnalysis = async (username, postId) => {
     `That's it for today folks. Let me know what you think in the comments. Support me on patreon and don't forget to like this video and subscribe to my channel. Cheers and until next time.`
   ]
   const analysis = descriptions.join('.\n')
-  console.log(analysis)
   return analysis
 }
 
