@@ -32,4 +32,6 @@ RUN npm install
 COPY . .
 
 #EXPOSE 8080
+#https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html
+#https://docs.docker.com/engine/reference/run/#env-environment-variables
 CMD [ "npm", "start" ]
