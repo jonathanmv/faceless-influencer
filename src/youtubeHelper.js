@@ -237,20 +237,24 @@ const refreshToken = auth => new Promise((resolve, reject) => {
 })
 
 // https://www.npmjs.com/package/googleapis#manually-refreshing-access-token
-const createAuth = async () => {
+const createAuth = () => {
   const {
     GOOGLE_CLIENT_ID = '',
     GOOGLE_CLIENT_SECRET = '',
-    GOOGLE_REDIRECT_URI = '',
-    GOOGLE_ACCESS_TOKEN = '',
-    GOOGLE_REFRESH_TOKEN = ''
+    GOOGLE_REDIRECT_URI = ''
   } = process.env
   if (!GOOGLE_CLIENT_ID.length || !GOOGLE_CLIENT_SECRET.length || !GOOGLE_REDIRECT_URI.length) {
     throw new Error(`Missing one of GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REDIRECT_URI environment variables`)
   }
 
-  let auth = new OAuth2(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REDIRECT_URI)
+  return new OAuth2(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REDIRECT_URI)
+}
 
+const setCredentials = async auth => {
+  const {
+    GOOGLE_ACCESS_TOKEN = '',
+    GOOGLE_REFRESH_TOKEN = ''
+  } = process.env
   if (GOOGLE_ACCESS_TOKEN.length && GOOGLE_REFRESH_TOKEN.length) {
     console.log(`Setting credentials from env vars`);
     auth.setCredentials({
@@ -335,11 +339,14 @@ const insertVideo = async (auth, params) => new Promise((resolve, reject) => {
 })
 
 const uploadVideo = async (fileName, { title, description }) => {
-  const auth = await createAuth()
+  const auth = createAuth()
+  await setCredentials(auth)
   const params = buildInsertVideoParams(fileName, { title, description })
   return await insertVideo(auth, params)
 }
 
 module.exports = {
+  createAuth,
+  requestToken,
   uploadVideo
 }

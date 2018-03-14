@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r dotenv/config src/index.js",
-    "upload": "node -r dotenv/config src/upload.js"
+    "token": "node -r dotenv/config tools/auth.js"
   },
   "keywords": [],
   "author": "",

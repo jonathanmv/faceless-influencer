@@ -4,7 +4,7 @@ const mediaHelper = require('./mediaHelper')
 
 const log = console.log.bind(console)
 
-const makeVideo = async (username, postNumber) => {
+const createAndUploadVideo = async (username, postNumber) => {
   const postIds = await mediumHelper.latestPostsIds(username)
   const postId = postIds[postNumber - 1]
   if (!postId) {
@@ -23,7 +23,7 @@ const makeVideo = async (username, postNumber) => {
 }
 
 const run = ({ username = 'jonathanmv', post = 1 }) => {
-  return makeVideo(username, post)
+  return createAndUploadVideo(username, post)
     .then(log)
     .catch(log)
 }
