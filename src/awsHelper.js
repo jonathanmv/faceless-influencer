@@ -7,6 +7,7 @@ const polly = bluebird.promisifyAll(new aws.Polly(config))
 const fs = bluebird.promisifyAll(require('fs'))
 
 const MAX_STRING_LENGTH = 4800 // It's 5000 bytes but that's ok
+const MAX_POLLY_STRING_LENGTH = 1500
 const cleanText = text => text.slice(0, MAX_STRING_LENGTH)
 
 const getEntities = text => {
@@ -22,6 +23,9 @@ const saveSpeech = ({ AudioStream }) => {
 }
 
 const getSpeech = text => {
+  if (text.length > MAX_POLLY_STRING_LENGTH) {
+    throw new Error('TextLengthExceededException: Maximum text length has been exceeded')
+  }
   const Text = cleanText(text)
   const OutputFormat = 'mp3'
   const VoiceId = 'Kimberly'

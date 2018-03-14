@@ -75,7 +75,7 @@ const describeEntityCounts = counts => {
   const topCount = `Mainly "${top.name}" which appears ${top.count} times, followed by `
   const topCounts = counts.slice(1, 4).map(({name, count}) => `"${name}" mentioned ${count} times`).join(', ')
   const rest = counts.slice(4, 7).map(({name}) => name).join(', ')
-  const others = `. Some other mentions include ${rest} plus many others`
+  const others = rest.length && `. Some other mentions include ${rest} plus many others` || ''
   return intro + topCount + topCounts + others
 }
 
@@ -95,20 +95,42 @@ const describePostTexts = texts => {
   return intro + postIntro
 }
 
-const getUserPostAnalysis = async (username, postId) => {
-  const textsInPost = await textInPostId(username, postId)
+const getPostAnalysis = async textsInPost => {
   const entitiesResponse = await awsHelper.getEntities(textsInPost.join('.\n'))
   const postTextDescription = describePostTexts(textsInPost)
   const stats = getStatsFromComprehendResponse(entitiesResponse)
-  const descriptions = [
-    describePostTexts(textsInPost),
-    `Ok, now let's analyze it`,
-    describeEntityCounts(stats.sortedEntityNamesCount),
-    describeTypesCounts(stats.sortedTypesCount),
-    `That's it for today folks. Let me know what you think in the comments. Support me on patreon and don't forget to like this video and subscribe to my channel. Cheers and until next time.`
+  let intro = describePostTexts(textsInPost)
+  const joiner = `Ok, now let's analyze it`
+  const entitiesAnalysis = describeEntityCounts(stats.sortedEntityNamesCount)
+  const typesAnalysis = describeTypesCounts(stats.sortedTypesCount)
+  const closing = `That's it for today folks. Let me know what you think in the comments. Support me on patreon and don't forget to like this video and subscribe to my channel. Cheers and until next time.`
+  let descriptions = [
+    intro,
+    joiner,
+    entitiesAnalysis,
+    typesAnalysis,
+    closing
   ]
-  const analysis = descriptions.join('.\n')
+  let analysis = descriptions.join('.\n')
+  // awsHelper MAX_POLLY_STRING_LENGTH
+  if (analysis.length > 1500) {
+    const difference = 1500 - analysis.length
+    // Remove extra length from the intro
+    intro = intro.slice(0, difference)
+    analysis = [
+      intro,
+      joiner,
+      entitiesAnalysis,
+      typesAnalysis,
+      closing
+    ].join('.\n')
+  }
   return analysis
+}
+
+const getUserPostAnalysis = async (username, postId) => {
+  const textsInPost = await textInPostId(username, postId)
+  return getPostAnalysis(textsInPost)
 }
 
 const saveUserPostScreenshotLocally = (username, postId) => {
@@ -116,8 +138,18 @@ const saveUserPostScreenshotLocally = (username, postId) => {
   return mediaHelper.takeScreenshot(url)
 }
 
+const buildPostInfo = (username, postId, postText) => {
+  const title = postText[0]
+  const url = userPostUrl(username, postId)
+  const description = `This is my analysis for "${title}" that you can read at ${url}`
+  return { title, description }
+}
+
 module.exports = {
+  textInPostId,
   latestPostsIds,
+  getPostAnalysis,
   getUserPostAnalysis,
-  saveUserPostScreenshotLocally
+  saveUserPostScreenshotLocally,
+  buildPostInfo
 }

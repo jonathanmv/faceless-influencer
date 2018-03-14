@@ -1,6 +1,7 @@
 const awsHelper = require('./awsHelper')
 const mediumHelper = require('./mediumHelper')
 const mediaHelper = require('./mediaHelper')
+const youtubeHelper = require('./youtubeHelper')
 
 const log = console.log.bind(console)
 
@@ -12,14 +13,19 @@ const createAndUploadVideo = async (username, postNumber) => {
     return
   }
   log('Getting user post analysis')
-  const analysis = await mediumHelper.getUserPostAnalysis(username, postId)
+  const post = await mediumHelper.textInPostId(username, postId)
+  const info = mediumHelper.buildPostInfo(username, postId, post)
+  const analysis = await mediumHelper.getPostAnalysis(post)
   log(analysis)
   log('Saving speech ...')
   const speechPath = await awsHelper.saveSpeechLocally(analysis)
   log('Saving screenshot ...')
   const screenshotPath = await mediumHelper.saveUserPostScreenshotLocally(username, postId)
   log(`Creating video from ${screenshotPath} and ${speechPath}`)
-  return mediaHelper.createVideo(screenshotPath, speechPath)
+  const videoPath = await mediaHelper.createVideo(screenshotPath, speechPath)
+  log(`Uploading ${videoPath} to YouTube`)
+  const videoId = await youtubeHelper.uploadVideo(videoPath, info)
+  return `Video uploaded at https://www.youtube.com/watch?v=${videoId}`
 }
 
 const run = ({ username = 'jonathanmv', post = 1 }) => {

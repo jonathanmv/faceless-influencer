@@ -342,7 +342,8 @@ const uploadVideo = async (fileName, { title, description }) => {
   const auth = createAuth()
   await setCredentials(auth)
   const params = buildInsertVideoParams(fileName, { title, description })
-  return await insertVideo(auth, params)
+  const response = await insertVideo(auth, params)
+  return response.id
 }
 
 module.exports = {
