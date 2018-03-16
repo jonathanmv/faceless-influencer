@@ -1,13 +1,18 @@
+const { REQUESTED } = require('./states.json')
 const bluebird = require('bluebird')
 const aws = require('aws-sdk')
 // plus the confiuration in the ~/.aws/credentials file
 const config = { region: 'us-east-1' }
 const comprehend = bluebird.promisifyAll(new aws.Comprehend(config))
 const polly = bluebird.promisifyAll(new aws.Polly(config))
+const db = bluebird.promisifyAll(new aws.DynamoDB.DocumentClient(config))
 const fs = bluebird.promisifyAll(require('fs'))
 
 const MAX_STRING_LENGTH = 4800 // It's 5000 bytes but that's ok
 const MAX_POLLY_STRING_LENGTH = 1500
+
+const REQUESTS_TABLE_NAME = 'medium-to-youtube-requests'
+
 const cleanText = text => text.slice(0, MAX_STRING_LENGTH)
 
 const getEntities = text => {
@@ -35,7 +40,32 @@ const getSpeech = text => {
 
 const saveSpeechLocally = text => getSpeech(text).then(saveSpeech)
 
+const updateRequest = request => {
+  const { username, postId } = request
+  const Key = { username, postId }
+  const TableName = REQUESTS_TABLE_NAME
+  const keys = Object.keys(request).filter(k => k != 'username' && k != 'postId')
+  const UpdateExpression = `set ${keys.map(k => `#${k} = :${k}`).join(', ')}`
+  const ExpressionAttributeNames = keys.reduce((o, k) => Object.assign(o, {[`#${k}`]: k}), {})
+  const ExpressionAttributeValues = keys.reduce((o, k) => Object.assign(o, {[`:${k}`]: request[k]}), {})
+  const params = {
+    TableName,
+    Key,
+    UpdateExpression,
+    ExpressionAttributeNames,
+    ExpressionAttributeValues
+  }
+  return db.updateAsync(params)
+    .then(_ => request)
+    .catch(error => {
+      console.log(`Error updating request on db: ${error.message}`)
+      console.log(params)
+      throw error
+    })
+}
+
 module.exports = {
   getEntities,
-  saveSpeechLocally
+  saveSpeechLocally,
+  updateRequest
 }

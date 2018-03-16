@@ -346,8 +346,11 @@ const uploadVideo = async (fileName, { title, description }) => {
   return response.id
 }
 
+const videoUrlFromVideoId = videoId => `https://www.youtube.com/watch?v=${videoId}`
+
 module.exports = {
   createAuth,
   requestToken,
-  uploadVideo
+  uploadVideo,
+  videoUrlFromVideoId
 }

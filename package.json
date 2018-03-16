@@ -11,8 +11,11 @@
     "docker_repository": "472551880915.dkr.ecr.us-east-1.amazonaws.com",
     "image": "faceless-influencer"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node -r dotenv/config src/index.js",
     "token": "node -r dotenv/config tools/auth.js",
     "ecs-login": "aws ecr get-login --region us-east-1 | sed -e 's/-e none//g' | bash",
