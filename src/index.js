@@ -5,13 +5,7 @@ const youtubeHelper = require('./youtubeHelper')
 
 const log = console.log.bind(console)
 
-const createAndUploadVideo = async (username, postNumber) => {
-  const postIds = await mediumHelper.latestPostsIds(username)
-  const postId = postIds[postNumber - 1]
-  if (!postId) {
-    log(`Couldn't find post #${postNumber}`)
-    return
-  }
+const createAndUploadVideo = async (username, postId) => {
   log('Getting user post analysis')
   const post = await mediumHelper.textInPostId(username, postId)
   const info = mediumHelper.buildPostInfo(username, postId, post)
@@ -28,7 +22,7 @@ const createAndUploadVideo = async (username, postNumber) => {
   return `Video uploaded at https://www.youtube.com/watch?v=${videoId}`
 }
 
-const run = ({ username = 'jonathanmv', post = 1 }) => {
+const run = ({ username = 'jonathanmv', postId = 'edbf9d528e68' }) => {
   return createAndUploadVideo(username, post)
     .then(log)
     .catch(log)
