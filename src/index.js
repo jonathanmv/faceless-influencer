@@ -7,7 +7,7 @@ const youtubeHelper = require('./youtubeHelper')
 const log = console.log.bind(console)
 
 const createAndUploadVideo = async (username, postId) => {
-  let request = awsHelper.getRequest(username, postId)
+  let request = await awsHelper.getRequest(username, postId)
   if (!request || request.state != REQUESTED) {
     return `Request doesn't exist or has been handled already`
   }

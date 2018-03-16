@@ -86,6 +86,7 @@ const sendVideoUploadedEmail = request => {
 
 module.exports = {
   getEntities,
+  getRequest,
   saveSpeechLocally,
   updateRequest,
   sendVideoUploadedEmail
