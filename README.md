@@ -10,3 +10,10 @@ The dependencies also include [ffmpeg](https://www.ffmpeg.org/) and a configured
 By default it will create a video from the latest post for the [@jonathanmv](https://medium.com/@jonathanmv) user on Medium. You can create videos for different users by specified an environment variable like this: `username=pepito post=3 npm start`. It will create a video for the third post found in the latest posts of the user pepito.
 # To run tests
 There are no tests available. I made this project as a proof of concept so it's not production ready.
+
+# To get access token
+Run `npm run token`
+
+# To build docker and deploy image
+Run `npm run ecs-login`
+Run `npm run docker-deploy`

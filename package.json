@@ -1,12 +1,27 @@
 {
   "name": "medium-scraper-lambda",
   "version": "1.0.0",
-  "description": "",
+  "description": "The story of how a non-human youtuber was born",
   "main": "src/index.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/jonathanmv/faceless-influencer.git"
+  },
+  "config": {
+    "docker_repository": "472551880915.dkr.ecr.us-east-1.amazonaws.com",
+    "image": "faceless-influencer"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r dotenv/config src/index.js",
-    "token": "node -r dotenv/config tools/auth.js"
+    "token": "node -r dotenv/config tools/auth.js",
+    "ecs-login": "aws ecr get-login --region us-east-1 | sed -e 's/-e none//g' | bash",
+    "docker-build": "docker build -t $npm_package_config_image .",
+    "docker-run": "docker run $npm_package_config_image",
+    "docker-tag": "docker tag $npm_package_config_image:latest $npm_package_config_docker_repository/$npm_package_config_image:latest",
+    "docker-push": "docker push $npm_package_config_docker_repository/$npm_package_config_image:latest",
+    "ecs-deploy": "npm run docker-build && npm run docker-tag && npm run docker-push",
+    "docker-connect": "docker exec -it $npm_package_config_image /bin/bash"
   },
   "keywords": [],
   "author": "",
