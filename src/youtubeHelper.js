@@ -333,9 +333,6 @@ const insertVideo = async (auth, params) => new Promise((resolve, reject) => {
     }
   })
   console.log(`Uploading ${params['mediaFilename']}`);
-  // var fileSize = fs.statSync(params['mediaFilename']).size;
-  // printProgress(request, fileSize)
-
 })
 
 const uploadVideo = async (fileName, { title, description }) => {

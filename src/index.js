@@ -1,4 +1,4 @@
-const { PROCESSING, COMPLETED, ERROR } = require('./states.json')
+const { REQUESTED, PROCESSING, COMPLETED, ERROR } = require('./states.json')
 const awsHelper = require('./awsHelper')
 const mediumHelper = require('./mediumHelper')
 const mediaHelper = require('./mediaHelper')
@@ -7,8 +7,12 @@ const youtubeHelper = require('./youtubeHelper')
 const log = console.log.bind(console)
 
 const createAndUploadVideo = async (username, postId) => {
+  let request = awsHelper.getRequest(username, postId)
+  if (!request || request.state != REQUESTED) {
+    return `Request doesn't exist or has been handled already`
+  }
   let state = PROCESSING
-  let request = { username, postId, state }
+  request.state = state
   await awsHelper.updateRequest(request)
   try {
     log('Getting user post analysis')
@@ -28,12 +32,14 @@ const createAndUploadVideo = async (username, postId) => {
     state = COMPLETED
     request = Object.assign(request, { state, videoId, videoUrl })
     await awsHelper.updateRequest(request)
+    await awsHelper.sendVideoUploadedEmail(request)
     return `Video uploaded at ${videoUrl}`
   } catch (error) {
     state = ERROR
     const stateDescription = `Couldn't create video for username: ${username} and postId: ${postId}. Error: ${error.message}`
     request = Object.assign(request, { state, stateDescription })
     await awsHelper.updateRequest(request)
+    //TODO await awsHelper.sendVideoFailedEmail(request)
     return stateDescription
   }
 }

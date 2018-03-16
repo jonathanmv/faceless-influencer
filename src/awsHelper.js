@@ -1,4 +1,6 @@
 const { REQUESTED } = require('./states.json')
+const emailHelper = require('./emailHelper')
+
 const bluebird = require('bluebird')
 const aws = require('aws-sdk')
 // plus the confiuration in the ~/.aws/credentials file
@@ -6,6 +8,7 @@ const config = { region: 'us-east-1' }
 const comprehend = bluebird.promisifyAll(new aws.Comprehend(config))
 const polly = bluebird.promisifyAll(new aws.Polly(config))
 const db = bluebird.promisifyAll(new aws.DynamoDB.DocumentClient(config))
+const ses = bluebird.promisifyAll(new aws.SES(config))
 const fs = bluebird.promisifyAll(require('fs'))
 
 const MAX_STRING_LENGTH = 4800 // It's 5000 bytes but that's ok
@@ -40,6 +43,18 @@ const getSpeech = text => {
 
 const saveSpeechLocally = text => getSpeech(text).then(saveSpeech)
 
+const getRequest = (username, postId) => {
+  const Key = { username, postId }
+  const TableName = REQUESTS_TABLE_NAME
+  const params = { TableName, Key }
+  return db.getAsync(params)
+    .then(({Item}) => Item)
+    .catch(error => {
+      console.log(`Error getting request from db: ${error.message}`)
+      console.log(params)
+    })
+}
+
 const updateRequest = request => {
   const { username, postId } = request
   const Key = { username, postId }
@@ -64,8 +79,14 @@ const updateRequest = request => {
     })
 }
 
+const sendVideoUploadedEmail = request => {
+  const params = emailHelper.buildEmailFromRequest(request)
+  return ses.sendEmailAsync(params)
+}
+
 module.exports = {
   getEntities,
   saveSpeechLocally,
-  updateRequest
+  updateRequest,
+  sendVideoUploadedEmail
 }
